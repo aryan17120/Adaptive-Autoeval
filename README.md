@@ -29,7 +29,7 @@ discriminative classifier.
 
 ## Repository Structure
 
-
+```bash
 adaptive-autoeval/
 ├── scripts/
 │   ├── run_extension1_imagenet.py       # Main ImageNet experiment
@@ -39,13 +39,12 @@ adaptive-autoeval/
 ├── results/
 │   ├── imagenet/                        # ImageNet results + figures
 │   ├── proteingym/                      # ProteinGym results + figures
-│   └── ablations/                       # Ablation results + figures
+│   ├── ablations/                       # Ablation results + figures
 ├── data/
 │   ├── imagenet/README.md               # Data download instructions
-│   └── proteingym/README.md             # Data download instructions
+│   ├── proteingym/README.md             # Data download instructions
 ├── requirements.txt
 └── README.md
-
 
 ---
 
