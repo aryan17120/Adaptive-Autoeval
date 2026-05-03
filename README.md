@@ -45,7 +45,7 @@ adaptive-autoeval/
 │   ├── proteingym/README.md             # Data download instructions
 ├── requirements.txt
 └── README.md
-
+```
 ---
 
 ## Setup
