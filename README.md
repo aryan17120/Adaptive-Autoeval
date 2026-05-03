@@ -67,8 +67,11 @@ for download instructions.
 After downloading, place data files in:
 
 results/phi_imagenet/resnet{18,34,50,101,152}.npy
+
 results/synthetic_imagenet/resnet{18,34,50,101,152}.npy
+
 data/proteingym/SPG1_STRSG_Olson_2014.csv
+
 data/proteingym/SPG1_STRSG_Olson_2014_zero_shot.csv
 
 ---
