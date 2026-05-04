@@ -24,6 +24,7 @@ https://www.proteingym.org/
 Required files:
 
 SPG1_STRSG_Olson_2014.csv
+
 SPG1_STRSG_Olson_2014_zero_shot.csv
 
 
