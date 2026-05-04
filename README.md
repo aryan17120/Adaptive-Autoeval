@@ -167,7 +167,7 @@ Outputs to `results/imagenet/`:
 ### Experiment 2: ProteinGym — Fitness-Biased Labeling
 
 ```bash
-python scripts/run_extension1_proteingym_full.py
+python scripts/run_extension1_proteingym.py
 ```
 
 Outputs to `results/proteingym/`:
@@ -200,7 +200,7 @@ Outputs to `results/proteingym/`:
 | Script | Runtime |
 |--------|---------|
 | `run_extension1_imagenet.py` | ~3 min |
-| `run_extension1_proteingym_full.py` | ~10–15 min |
+| `run_extension1_proteingym.py` | ~10–15 min |
 | `run_extension1_ablations.py` | ~10–12 min |
 | `compute_spearman.py` | ~5–8 min |
 
