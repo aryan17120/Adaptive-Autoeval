@@ -105,15 +105,15 @@ For full results including ablations see
 
 ## Repository Structure
 
-
+```bash
 adaptive-autoeval/
 ├── adaptive_autoeval/          # pip-installable library
-│   ├── init.py
+│   ├── __init__.py
 │   ├── estimators.py           # ppi_unweighted, ppi_weighted
 │   └── weights.py              # learn_importance_weights
 ├── scripts/
 │   ├── run_extension1_imagenet.py        # ImageNet experiment
-│   ├── run_extension1_proteingym.py # ProteinGym experiment
+│   ├── run_extension1_proteingym.py      # ProteinGym experiment
 │   ├── run_extension1_ablations.py       # Ablation studies
 │   └── compute_spearman.py               # Spearman analysis
 ├── results/
@@ -127,7 +127,6 @@ adaptive-autoeval/
 ├── pyproject.toml
 ├── requirements.txt
 └── README.md
-
 
 ---
 
