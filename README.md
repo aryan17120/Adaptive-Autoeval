@@ -1,9 +1,8 @@
 # Adaptive AutoEval
 ## Importance-Weighted Model Evaluation under Unknown Covariate Shift
 
-Official code for the paper:
-> **AutoEval under Unknown Covariate Shift: Learning Importance Weights
-> from Unlabeled Data** — Submitted to NeurIPS 2026
+### Importance-Weighted Model Evaluation under Unknown Covariate Shift
+*Anonymous submission — NeurIPS 2026 Main Track*
 
 ---
 
@@ -25,6 +24,36 @@ labeling on ImageNet, standard AutoEval coverage collapses from
 nominal 90% to **1.7%** at n=500 as confidence intervals shrink
 around a biased estimate. The error is invisible to standard
 evaluation.
+
+
+---
+
+## Results
+
+### ImageNet — Synthetic Covariate Shift (250 trials)
+
+| n   | Classical | PPI++ | Oracle | **Adaptive** |
+|-----|-----------|-------|--------|--------------|
+| 50  | 0.635 | 0.793 | 0.700 | **0.789** |
+| 100 | 0.461 | 0.823 | 0.684 | **0.834** |
+| 200 | 0.224 | 0.753 | 0.662 | **0.770** |
+| 500 | 0.017 | 0.682 | 0.554 | **0.720** |
+
+*Coverage of nominal 90% confidence intervals.*
+Adaptive AutoEval outperforms even Oracle PPI++ (true weights)
+due to implicit regularization of extreme density ratio values.
+
+### ProteinGym SPG1 — Fitness-Biased Labeling (250 trials, β=1.0)
+
+| n    | Classical | PPI++ | **Adaptive** | MSE reduction |
+|------|-----------|-------|--------------|---------------|
+| 200  | 0.198 | 0.166 | **0.556** | 46% |
+| 1500 | 0.000 | 0.000 | **0.029** | 61% |
+
+For full results including ablations see
+[`results/experiments.md`](results/experiments.md).
+
+---
 
 ---
 
@@ -74,34 +103,7 @@ ci = (mu_hat - z * np.sqrt(var_hat), mu_hat + z * np.sqrt(var_hat))
 print(f"Estimate: {mu_hat:.3f}  90% CI: [{ci[0]:.3f}, {ci[1]:.3f}]")
 ```
 
----
 
-## Results
-
-### ImageNet — Synthetic Covariate Shift (250 trials)
-
-| n   | Classical | PPI++ | Oracle | **Adaptive** |
-|-----|-----------|-------|--------|--------------|
-| 50  | 0.635 | 0.793 | 0.700 | **0.789** |
-| 100 | 0.461 | 0.823 | 0.684 | **0.834** |
-| 200 | 0.224 | 0.753 | 0.662 | **0.770** |
-| 500 | 0.017 | 0.682 | 0.554 | **0.720** |
-
-*Coverage of nominal 90% confidence intervals.*
-Adaptive AutoEval outperforms even Oracle PPI++ (true weights)
-due to implicit regularization of extreme density ratio values.
-
-### ProteinGym SPG1 — Fitness-Biased Labeling (250 trials, β=1.0)
-
-| n    | Classical | PPI++ | **Adaptive** | MSE reduction |
-|------|-----------|-------|--------------|---------------|
-| 200  | 0.198 | 0.166 | **0.556** | 46% |
-| 1500 | 0.000 | 0.000 | **0.029** | 61% |
-
-For full results including ablations see
-[`results/experiments.md`](results/experiments.md).
-
----
 
 ## Repository Structure
 
