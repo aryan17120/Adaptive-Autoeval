@@ -50,12 +50,14 @@ How to Generate the Data:
 
 You will need to:
 
-1. Download ImageNet
+1. Download ImageNet Validation Data
 
 Register and download:
 
 Dataset: ILSVRC2012 validation set
 Source: http://www.image-net.org/
+
+
 2. Run ResNet Models
 
 For each model:
