@@ -28,7 +28,7 @@ SPG1_STRSG_Olson_2014.csv
 SPG1_STRSG_Olson_2014_zero_shot.csv
 
 
-Required Directory Structure
+Required Directory Structure:
 
 Place files exactly here:
 
